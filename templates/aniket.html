@@ -1,0 +1,26 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "About Me" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>About Me</strong></h1>
+        <p class="text-secondary">My Name is Aniket Chakradeo, and I'm a sophomore from Del Norte High School </p>
+        <div>
+          <p>Here are some of my links:</p>
+          <a href="https://anicricket.github.io/automatic-spork/" class="btn btn-primary">My Fastpages Blog</a>
+          <a href="https://github.com/AniCricKet" class="btn btn-primary">My Personal GitHub</a>
+          <a href="https://www.youtube.com/channel/UCAytMRnhouSJnHhf4ZHsd2g" class="btn btn-primary">My YouTube Channel</a>
+          <a href="https://open.spotify.com/user/crickettendulkar?si=6a1e70eb06bf4071" class="btn btn-primary">My Spotify Account</a>
+          <a href="https://www.instagram.com/aniketchakradeo/?hl=en" class="btn btn-primary">My Instagram Account</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

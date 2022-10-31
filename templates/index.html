@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+{% set project = "Home" %}
+
+{% block body %}
+    <!-- Start of body content specific to page -->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-white"><strong>Our Team Members:</strong></h1>
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/Scrummy.png') }}" alt="Lucas Moore" height="450">
+                    <div class="card-body">
+                    <h5 class="card-title">Lucas - Scrum Master</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>My name is Lucas Moore and I am this Group's Scrum Master.</li>
+                            <li>I was born on December 16 2006.</li>
+                            <li>I am a sophomore at Del Norte Highschool and live in 4S Ranch.</li>
+                            <li>I have a younger sister and two cats.</li>
+                            <li>I love volleyball and love playing in the front.</li>
+                            <li>I also love playing</li>
+                            <style>
+                                a {
+                                color: black;
+                                text-decoration: none;
+                                cursor: auto;
+                                }
+                                </style>
+                                <p>
+                                  <a href="https://drive.google.com/file/d/1yu9Q0LPxlSni9WDyQEJzDJ9z4nkBlByP/view?usp=sharing" 
+                                   style="text-decoration: none">games</a>
+                                </p>
+                        </ol>
+                    </p>
+                    <a href="#" class="btn btn-primary">More about Lucas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/creampie.JPG') }}" alt="Ryan Hakimipour" height="450">
+                    <div class="card-body">
+                    <h5 class="card-title">Ryan - DevOps</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>My name is Ryan Hakimipour.</li>
+                            <li>I was born on June 15th 2007.</li>
+                            <li>I'm a sophomore at Del Norte Highschool, and haven't lived in 4S Ranch my whole life. (I love maple syrup, guess where I live)</li>
+                            <li>I have one older sister.</li>
+                            <li>I am a huge fan of sports. I love watching and playing american football, football, and gawlf.</li>
+                        </ol>
+                    </p>
+                    <a href="#" class="btn btn-primary">More about Ryan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/cutiepiepng.jpg') }}" alt="Aniket Chakradeo" height="450">
+                    <div class="card-body">
+                        <h5 class="card-title">Aniket - Backend Developer</h5>
+                        <p class="card-text">
+                            <ol>
+                                <li>My name is Aniket Chakradeo.</li>
+                                <li>I was born on Feburary 20th 2007.</li>
+                                <li>I'm a sophomore at Del Norte Highschool, and have lived in 4S Ranch my whole life.</li>
+                                <li>I have one older sister.</li>
+                                <li>I am a huge fan of sports. I love watching and playing cricket, soccer, and tennis.</li>
+                            </ol>
+                        </p>
+                        <a href="/aniket/" class="btn btn-primary">More about Aniket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='assets/pumpkinpiepng.jpeg') }}" alt="Soham Kamat" height="450">
+                    <div class="card-body">
+                    <h5 class="card-title">Soham - Frontend Developer</h5>
+                    <p class="card-text">
+                        <ol>
+                            <li>My name is Soham Kamat.</li>
+                            <li>I was born on March 9th 2007.</li>
+                            <li>I'm a sophomore at Del Norte Highschool, and have lived in 4S Ranch my whole life.</li>
+                            <li>I have one younger sister.</li>
+                            <li>I am a huge fan of sports. I love watching and playing cricket, soccer, and basketball.</li>
+                        </ol>
+                    </p>
+                    <a href="#" class="btn btn-primary">More about Soham</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

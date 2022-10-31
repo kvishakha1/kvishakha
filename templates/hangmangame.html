@@ -1,0 +1,57 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "hangmangame" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-black"><strong>Welcome to Hangman!</strong></h1>
+        <h2 class="text-black">Here is your hint:</h2>
+        <h4 id="myword"></h4>
+        <style>
+            .logo{
+                width: 100px;
+                display: inline-flex;
+            }
+            
+            .logo img{
+                margin: auto 5px;
+                float: right;
+                width: 150px;
+                height: 38px;
+            }
+        </style>
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/allbodys.jpg') }}" alt="HangmanGame" height="450">
+        <!-- <img class="card-img-top" src="{{ url_for('static', filename='assets/nolefthand.jpeg') }}" alt="Hangman" height="450">
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/noarms.jpeg') }}" alt="Hangman" height="450">
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/lefttofendforhimself.jpeg') }}" alt="Hangman" height="450">
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/nolegs.jpeg') }}" alt="Hangman" height="450">
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/riplollypop.jpeg') }}" alt="Hangman" height="450">
+        <img class="card-img-top" src="{{ url_for('static', filename='assets/ggs.jpeg') }}" alt="Hangman" height="450"> -->
+        <table>
+            <tr><td><button class="editbtn">A</button></td><td><button class="editbtn">B</button></td><td><button class="editbtn">C</button></td><td><button class="editbtn">D</button></td><td><button class="editbtn">E</button></td><td><button class="editbtn">F</button></td><td><button class="editbtn">G</button></td></tr>
+            <tr><td><button class="editbtn">H</button></td><td><button class="editbtn">I</button></td><td><button class="editbtn">J</button></td><td><button class="editbtn">K</button></td><td><button class="editbtn">L</button></td><td><button class="editbtn">M</button></td><td><button class="editbtn">N</button></td></tr>
+            <tr><td><button class="editbtn">O</button></td><td><button class="editbtn">P</button></td><td><button class="editbtn">Q</button></td><td><button class="editbtn">R</button></td><td><button class="editbtn">S</button></td><td><button class="editbtn">T</button></td><td><button class="editbtn">U</button></td></tr>
+            <tr><td><button class="editbtn">V</button></td><td><button class="editbtn">W</button></td><td><button class="editbtn">X</button></td><td><button class="editbtn">Y</button></td><td><button class="editbtn">Z</button></td><td><button class="editbtn">_</button></td><td><button class="editbtn">.</button></td></tr>
+        </table>
+    </div>
+    <script>
+        const http = new XMLHttpRequest()
+
+        http.open("GET", "/randomword")
+        http.send()
+        http.onload = () => { 
+            console.log(http.responseText);
+            const elem = document.getElementById('myword');
+            elem.innerHTML = http.responseText;
+        }
+
+    </script>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}    

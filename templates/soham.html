@@ -1,0 +1,127 @@
+<!-- Extending the predefined project layout -->
+
+
+{% extends "layouts/base.html" %}
+import { createApp } from 'vue'
+<!- This variable sets name of browser tab  -->
+{% set project = "About Me" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>About Soham Kamat</strong></h1>
+        <p class="text-secondary">Soham Kamat is a high school student who has created this flask server as a part of AP Computer Science Principals. Here are some of my links below:</p>
+        <div>
+          <a href="https://github.com/Soham360/csp-fastpages" class="btn btn-primary">My Fastpages Blog</a>
+          <a href="https://github.com/Soham360" class="btn btn-primary">My Personal GitHub</a>
+        </div>
+    <style>
+    table,
+    td {
+       border: 1px solid #333;
+    }
+
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+    </style>
+    <p class="text-secondary">Here is my class schedule below:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">School Schedule</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Period 1 </td>
+                <td> Mrs. Callicott </td>
+            </tr>
+            <tr>
+                <td> Period 2 </td>
+                <td> Mr. Campillo </td>
+            </tr>
+            <tr>
+                <td> Period 3 </td>
+                <td> Mrs. Bueller </td>
+            </tr>
+            <tr>
+                <td> Period 4 </td>
+                <td> Mrs. James </td>
+            </tr>
+            <tr>
+                <td> Period 5 </td>
+                <td> Mr. Yeung </td>
+            </tr>
+           
+        </tbody>
+    </div>
+    </table>
+
+    <form method="POST"> 
+
+
+    <!-- 28 Buttons Code -->
+    <input type="button" value="A" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="B" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="C" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="D" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="E" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="F" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="G" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="H" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="I" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="J" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="K" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="L" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="M" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="N" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="O" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="P" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="Q" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="R" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="S" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="T" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="U" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="V" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="W" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="X" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="Y" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="Z" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="Period" onclick="Letter(this)" id="mykey"/>
+    <input type="button" value="Space" onclick="Letter(this)" id="mykey"/>
+    <input type="text" id="fname" name="fname">
+    
+
+    <p>Your Guess is: <br>
+    <span id = "key"></span>
+    <span id = "temp"></span>
+    </p>
+
+    <script>
+    function Letter(x) {
+        if (x.value == "Space") {
+            document.getElementById("key").innerHTML = " ";
+            fname.value = x.value
+        }
+        else if (x.value == "Period") {
+            document.getElementById("key").innerHTML = ".";
+            fname.value = x.value
+        }
+        else {
+            document.getElementById("key").innerHTML = x.value;
+            fname.value = x.value
+            var t = document.getElementById("mykey").form.id;
+            document.getElementById("temp").innerHTML = t;
+        }
+    }
+    </script>
+    <input type="submit" value="Go">
+    </form> 
+{% endblock %}
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

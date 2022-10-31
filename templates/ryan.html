@@ -1,0 +1,78 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+        <div class="px-5 py-5 mx-auto">
+             <h1 class="text-primary"><strong>About Me</strong></h1>
+             <p class="text-secondary">My Name is Ryan Hakimipour, and I'm a sophomore from Del Norte High School. I am in Mr. Yeung's Period 5 AP CSP class.</p>
+    
+             <div> 
+                 <p>Here are some of my links:</p>
+                 <a href="https://ryanhaki.github.io/APCSPwebPage/" class="btn btn-primary">My Fastpages</a>
+                 <a href="https://github.com/RyanHaki" class="btn btn-primary">My Personal GitHub</a>
+             </div>
+             
+             <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;}
+                .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-yf2y{background-color:#F5F5F5;color:#333;text-align:left;vertical-align:top}
+                .tg .tg-citn{background-color:#FFF;color:#333;text-align:left;vertical-align:top}
+                .tg .tg-0lax{text-align:left;vertical-align:top}
+                .tg .tg-c4od{background-color:#FFF;color:#337AB7;text-align:left;vertical-align:top}
+                .tg .tg-c1wc{background-color:#F5F5F5;color:#337AB7;text-align:left;vertical-align:top}
+                </style>
+                <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-0lax">Period</th>
+                    <th class="tg-0lax">Class</th>
+                    <th class="tg-0lax">Room</th>
+                    <th class="tg-0lax">Teacher</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-citn">1</td>
+                    <td class="tg-citn">Physics of the Universe</td>
+                    <td class="tg-citn">Kl04</td>
+                    <td class="tg-c4od"><a href="">Andrea Callicott </a></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">2</span></td>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">Int Math 2B</span></td>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">R301</span></td>
+                    <td class="tg-c1wc"><a href="">Yali Huang </a></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-citn">3</td>
+                    <td class="tg-citn">AP WORLD HIST </td>
+                    <td class="tg-citn">L118</td>
+                    <td class="tg-c4od"><a href="">Teresa Kim </a></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">4</span></td>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">HS English 3(1)</span></td>
+                    <td class="tg-yf2y"><span style="background-color:#F5F5F5">G113</span></td>
+                    <td class="tg-c1wc"><a href="">Kristen James </a></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-citn">5</td>
+                    <td class="tg-citn">AP CS Principles</td>
+                    <td class="tg-citn">A101</td>
+                    <td class="tg-c4od"><a href="">Sean Yeung </a></td>
+                  </tr>
+                </tbody>
+                </table>''
+                
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}

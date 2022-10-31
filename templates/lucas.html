@@ -1,0 +1,93 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Stubby" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here, bootstrap is a wise choice ->
+    <div class="px-5 py-5 mx-auto">
+        <h1 class="text-primary"><strong>About Me</strong></h1>
+        <p class="text-secondary"><mark>My name is Lucas Moore. I am a sophomore at Del Norte High School. I am taking an AP Computer Principal class to get a better understanding of how a computer works and what it can do. This Web page is my Flask/Python local server.<mark></p>
+            <p><mark>My personal links:<mark></p>
+          <a href="https://q-tipwithaface.github.io/Q-tip/" class="btn btn-primary">My Fastpages</a>
+          <a href="https://github.com/Q-tipwithaface/Q-tip" class="btn btn-primary">My GitHub</a>
+        <p class="text-secondary"><mark>Below is a table containing infomation about my role in my group as well as my teammates. Below that table is another table displaying resources to unique lines of code.<mark></p>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Class Role</th>
+          <th scope="col">Group Role</th>
+        </tr>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Lucas</td>
+            <td>10th</td>
+            <td>Student</td>
+            <td>Scrum Master</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Aniket</td>
+            <td>10th</td>
+            <td>Student</td>
+            <td>Frontend Developer</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Ryan</td>
+            <td>10th</td>
+            <td>Student</td>
+            <td>DevOps</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Soham</td>
+            <td>10th</td>
+            <td>Student</td>
+            <td>Backend Developer</td>
+      </thead>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Topic</th>
+          <th scope="col">Resource</th>
+          <th scope="col">Search</th>
+          <th scope="col">Heading</th>
+        </tr>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Tables</td>
+            <td>Bootstrap</td>
+            <td>Bootstrap how to make a table</td>
+            <td>tr</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Text</td>
+            <td>Bootstrap</td>
+            <td>Bootstrap how to create text</td>
+            <td>div</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Borders</td>
+            <td>Bootstrap</td>
+            <td>Bootstrap how to create borders</td>
+            <td>span</td>
+          </tr>
+      </thead>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+{% endblock %}
+Lucas stinky
